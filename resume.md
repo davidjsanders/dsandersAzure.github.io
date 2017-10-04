@@ -9,6 +9,6 @@ Life-long learner and innovator with track record of delivering strategic outcom
 
 Bridges gaps between business units and Information Technology by enabling clear paths to value through significant experience and leadership in:
 
-<span style="text-align: center; color: red;">
+<p style="width: 100%; text-align: center;">
 Strategy, Facilitation, C-Suite Engagement, Business Alignment, Coordination, Communications, Presentations, Roadmaps, Evaluation, Prototyping, Proof of Concepts, Organizational Change Matrix Management, Program Management, and Project Management.
-</span>
+</p>
