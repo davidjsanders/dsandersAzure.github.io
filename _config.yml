@@ -16,7 +16,11 @@
 title: David J. Sanders, MSc.
 email: david@davidjsanders.com
 description: >- # this means to ignore newlines until "baseurl:"
-  To be completed.
+  Life-long learner and innovator with track record of delivering strategic outcomes and realizing business value 
+  using collaborative, agile, and business driven approaches across retail, banking, engineering, and government 
+  sectors in consulting and presales.
+  Bridges gaps between business units and Information Technology by enabling clear paths to value through optimization,
+  innovation, and transformation.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.davidjsanders.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  dsandersAzure
