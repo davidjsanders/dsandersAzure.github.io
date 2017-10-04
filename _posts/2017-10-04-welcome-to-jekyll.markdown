@@ -9,7 +9,12 @@ categories:
 ---
 A solution that I've become really enamoured with is [CircleCI](https://circleci.com/) which offers SaaS and on-premises tools for continuous integration.  What I really like is a simple YAML configuration controls the build pipeline on every commit.
 
-**tl&dr : Use simple yaml configuration files with CircleCI.com to automatically prepare, pull, test, and deploy to Docker and Google App Engine.** (ps. the yaml file is [here](https://github.com/dsandersAzure/python_cowbull_server/blob/master/.circleci/config.yml))
+**tl&dr : Use simple yaml configuration files with CircleCI.com to automatically prepare, pull, test, and deploy to Docker and Google App Engine.** 
+
+Quick notes:
+* The [yaml configuration file](https://github.com/dsandersAzure/python_cowbull_server/blob/master/.circleci/config.yml)is in my repository and publicly available.
+* The CircleCI build will **not** complete if the Google Cloud app is disabled (a state I often use to save money).
+* References and attributions are at the end of this post.
 
 #### Step 1, Spin up the environment
 
@@ -63,7 +68,7 @@ All that's happening here is we are restoring our environment dependencies cache
 {% endraw %}
 {% endhighlight %}
 
-There's an interesting piece here. Notice that I've set pipefail to ensure that test failure is detected, and I've also redirected the error output to a file. There's a few reasons for this but I'd like to direct you back to the [original StackOverflow question](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe) that does clever stuff with process redirection and resolved my issues - it's worth reading.
+There's an interesting piece here. Notice that I've set pipefail to ensure that test failure is detected, and I've also redirected the error output to a file using process redirection with tee. There's a few reasons for this but I'd like to direct you back to the [original StackOverflow question](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe) that does clever stuff with process redirection and resolved my issues - it's worth reading.
 
 #### Step 4 Install Google Cloud dependencies
 
@@ -87,17 +92,25 @@ This section basically downloads and installs the Google gcloud environment and 
 
 The steps for this were heavily influenced by a really good [Atlassian](www.atlassian.com) article on [deploying to Google](https://confluence.atlassian.com/bitbucket/deploy-to-google-cloud-900820342.html) using BitBucket pipelines. I borrowed these steps for a CircleCI approach.
 
-1. Run the tests
+One final note, the project is set in an env. var. so it can be easily changed.
 
-1. Install the cloud platform CLI of choice (in my case GCloud)
+#### Step 5 Build the GAE environment and deploy
 
-1. Build and deploy to the cloud (my case Google App Engine)
+{% highlight yaml %}
+{% raw %}
+   - run:
+     name: Build GAE project and deploy
+     command: |
+       export CLOUDSDK_CORE_DISABLE_PROMPTS=1
+       mkdir -p vendor/gae
+       pip install -t vendor/gae/lib -r requirements.txt
+       gcloud app deploy --version="cigen-"$MAJOR_VERSION"-"$MINOR_VERSION"-"$CIRCLE_BUILD_NUM --quiet
+{% endraw %}
+{% endhighlight %}
 
-1. Set the cloud deployment to A/B, blue/green, or canary depending upon env. vars.
+Here, I've disabled prompts and then created a vendor structure for my GAE project to contain a library of my python packages required to run the app. *Notice* that the path isn't in the repo because I don't want a whole host of Python libs in my git repository.
 
-1. Build a Docker image of the solution
-
-1. Push to the Docker hub.
+When the requirements have been installed I don't re-run the unit tests (because they've already passed) and I then app deploy setting the version name to MAJOR-MINOR-BUILD_NUM. I could do more here and set the traffic split, etc., but don't for testing purposes.
 
 Done in about 5 mins as soon as a commit is pushed!
 
