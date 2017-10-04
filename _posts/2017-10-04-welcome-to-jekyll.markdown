@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Continuous Integration as a Service
-date: 2017-09-28 09:24:55 -0400
+date: 2017-09-28 13:24:55 +0000
 categories:
 - Continuous Integration
 - SaaS
@@ -100,24 +100,59 @@ One final note, the project is set in an env. var. so it can be easily changed.
 
 {% highlight yaml %}
 {% raw %}
-   - run:
-     name: Build GAE project and deploy
-     command: |
-       export CLOUDSDK_CORE_DISABLE_PROMPTS=1
-       mkdir -p vendor/gae
-       pip install -t vendor/gae/lib -r requirements.txt
-       gcloud app deploy --version="cigen-"$MAJOR_VERSION"-"$MINOR_VERSION"-"$CIRCLE_BUILD_NUM --quiet
+- run:
+    name: Build GAE project and deploy
+    command: |
+      export CLOUDSDK_CORE_DISABLE_PROMPTS=1
+      mkdir -p vendor/gae
+      pip install -t vendor/gae/lib -r requirements.txt
+      gcloud app deploy --version="cigen-"$MAJOR_VERSION"-"$MINOR_VERSION"-"$CIRCLE_BUILD_NUM --quiet
 {% endraw %}
 {% endhighlight %}
 
-Here, I've disabled prompts and then created a vendor structure for my GAE project to contain a library of my python packages required to run the app. *Notice* that the path isn't in the repo because I don't want a whole host of Python libs in my git repository.
+Here, I've disabled prompts and then created a vendor structure for my GAE project to contain a library of my python packages required to run the app. *Notice* that the path *isn't* in the repo, because I don't want a host of Python libs in my git repository.
 
-When the requirements have been installed I don't re-run the unit tests (because they've already passed) and I then app deploy setting the version name to MAJOR-MINOR-BUILD_NUM. I could do more here and set the traffic split, etc., but don't for testing purposes.
+When the requirements have been installed I  app deploy setting the version name to MAJOR-MINOR-BUILD_NUM. I could do more here and set the traffic split, etc., but don't for testing purposes.
+
+#### Step 6 Build and push the Docker image
+
+{% highlight yaml %}
+{% raw %}
+- run:
+    name: build docker image
+    command: |
+      docker login --username=$doclog --password=$docpass
+      docker build -f vendor/docker/Dockerfile -t dsanderscan/$IMAGE_NAME:$MAJOR_VERSION"."$MINOR_VERSION"."$CIRCLE_BUILD_NUM .
+- run:
+    name: push docker image
+    command: |
+      docker tag dsanderscan/$IMAGE_NAME:$MAJOR_VERSION"."$MINOR_VERSION"."$CIRCLE_BUILD_NUM dsanderscan/$IMAGE_NAME:latest
+      docker push dsanderscan/$IMAGE_NAME:$MAJOR_VERSION"."$MINOR_VERSION"."$CIRCLE_BUILD_NUM
+      docker push dsanderscan/$IMAGE_NAME:latest
+{% endraw %}
+{% endhighlight %}
+
+The Docker image is built (note env. vars. are again used for credentials) using the dockerfile contained in the repo (in the vendor structures) and then tagged with the build number and latest. If there was a pre-release stage, the latest tag could be left until after that stage was completed.
+
+#### Step 7 Finalize and tidy-up
+
+{% highlight yaml %}
+{% raw %}
+- save_cache:
+    key: v2-dependencies-{{ checksum "requirements.txt" }}
+    paths:
+      - ~/.m2
+- store_artifacts:
+    path: /tmp/unittest-report.log
+    destination: unittest-report
+{% endraw %}
+{% endhighlight %}
+
+And that's it. The final steps are to save the cache and then upload the test output to the artifact repository.
 
 Done in about 5 mins as soon as a commit is pushed!
 
-Integrating to GAE (or anything) is really easy and simply requires a build step to "gcloud auth activate-service-account $circleciuser --key-file auth.json --project=$gproject" - Note the env. vars. which CircleCI holds in the project configuration; I base64 encode them but heavily restrict the service account's permissions in GAE; if you're really concerned about credentials and secrets, there are others things you could do to mitigate.
-
 Enjoy the work from the CircleCI team in San Francisco.
 
-https://circleci.com/
+[https://circleci.com/](https://circleci.com)
+
