@@ -1,3 +1,10 @@
 ---
 hide_body: false
-fields: []
+fields:
+- type: text
+  default: David J. Sanders
+- type: file
+  default: "/uploads/2017/10/04/Dec 2016 Profile Pic.jpg"
+  label: David J. Sanders, MSc
+  name: david_j__sanders__msc
+  description: David attending his Student of the Year ceremony in Liverpool, UK
