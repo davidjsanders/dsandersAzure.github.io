@@ -1,4 +1,6 @@
 ---
+pages:
+- _posts/welcome-to-the-new-site.md
 hide_body: false
 fields:
 - type: text
