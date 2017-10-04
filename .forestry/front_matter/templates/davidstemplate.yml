@@ -1,6 +1,6 @@
 ---
 pages:
-- test-page.md
+- test.md
 hide_body: false
 fields:
 - type: text
