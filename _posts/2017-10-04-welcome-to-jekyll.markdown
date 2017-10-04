@@ -12,7 +12,7 @@ A solution that I've become really enamoured with is [CircleCI](https://circleci
 **tl&dr : Use simple yaml configuration files with CircleCI.com to automatically prepare, pull, test, and deploy to Docker and Google App Engine.** 
 
 Quick notes:
-* The [yaml configuration file](https://github.com/dsandersAzure/python_cowbull_server/blob/master/.circleci/config.yml)is in my repository and publicly available.
+* The [yaml configuration file](https://github.com/dsandersAzure/python_cowbull_server/blob/master/.circleci/config.yml) is in my repository and publicly available.
 * The CircleCI build will **not** complete if the Google Cloud app is disabled (a state I often use to save money).
 * References and attributions are at the end of this post.
 
