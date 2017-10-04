@@ -16,6 +16,8 @@ Quick notes:
 * The CircleCI build will **not** complete if the Google Cloud app is disabled (a state I often use to save money).
 * References and attributions are at the end of this post.
 
+My yaml configuration file consists of a number of sections (*NB* do **not** copy and paste from here due to formatting issues; please use the repo [file](https://github.com/dsandersAzure/python_cowbull_server/blob/master/.circleci/config.yml)).
+
 #### Step 1, Spin up the environment
 
 {% highlight yaml %}
