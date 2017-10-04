@@ -1,0 +1,20 @@
+---
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: description
+  label: Description
+- type: tag_list
+  name: tags
+  label: Tags
+- type: text
+  name: banner
+  label: Banner
+- type: tag_list
+  name: categories
+  label: Categories
