@@ -70,7 +70,7 @@ All that's happening here is we are restoring our environment dependencies cache
 {% endraw %}
 {% endhighlight %}
 
-There's an interesting piece here. Notice that I've set pipefail to ensure that test failure is detected, and I've also redirected the error output to a file using process redirection with tee. There's a few reasons for this but I'd like to direct you back to the [original StackOverflow question](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe) that does clever stuff with process redirection and resolved my issues - it's worth reading.
+There's an interesting piece here. Notice that I've set pipefail to ensure that test failure is detected, and I've also redirected the error output to a file using process redirection with tee. There's a few reasons for this but I'd like to direct you back to the [original StackOverflow question](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe) (1) that does clever stuff with process redirection and resolved my issues - it's worth reading.
 
 #### Step 4 Install Google Cloud dependencies
 
@@ -92,7 +92,7 @@ There's an interesting piece here. Notice that I've set pipefail to ensure that 
 
 This section basically downloads and installs the Google gcloud environment and uses env. vars. (defined in the CircleCI console) to provide the credentials to a minimum privileged service account that is able to deploy to Google App Engine.
 
-The steps for this were heavily influenced by a really good [Atlassian](www.atlassian.com) article on [deploying to Google](https://confluence.atlassian.com/bitbucket/deploy-to-google-cloud-900820342.html) using BitBucket pipelines. I borrowed these steps for a CircleCI approach.
+The steps for this were heavily influenced by a really good [Atlassian](www.atlassian.com) (2) article on [deploying to Google](https://confluence.atlassian.com/bitbucket/deploy-to-google-cloud-900820342.html) using BitBucket pipelines. I borrowed these steps for a CircleCI approach.
 
 One final note, the project is set in an env. var. so it can be easily changed.
 
@@ -156,3 +156,7 @@ Enjoy the work from the CircleCI team in San Francisco.
 
 [https://circleci.com/](https://circleci.com)
 
+### References
+1. *How do I write stderr to a file while using "tee" with a pipe?* (2009). Available at: [https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe](https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe) (Accessed: 04 October 2017)
+
+2. Atlassian (2017) *Deploy to Google Cloud*. Available at: [https://confluence.atlassian.com/bitbucket/deploy-to-google-cloud-900820342.html](https://confluence.atlassian.com/bitbucket/deploy-to-google-cloud-900820342.html) (Accessed: 04 October 2017)
