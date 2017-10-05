@@ -7,3 +7,5 @@ title: About David
 I'm a life-long learner. continual developer, and innovator with a track record of delivering strategic outcomes and realizing business value using collaborative, agile, and business driven approaches across retail, banking, engineering, and government sectors in consulting and pre-sales.
 
 I aim to bridge gaps between business units and Information Technology by enabling clear paths to value and focusing IT discussions on how we optimize, innovate, and transform the business success.
+
+I graduated from the [University of Liverpool](https://www.liverpool.ac.uk/) in 2016 with a Master of Science in Information Technology. I was also very humbled to win the Student of the Year (2016) award for academic excellence.
