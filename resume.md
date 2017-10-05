@@ -19,8 +19,9 @@ Strategy &vert; Facilitation &vert; C-Suite Engagement &vert; Business Alignment
 
 <style>
 .highlighter {
-    background-color: red;
-    color: white;
+    background-color: darkgray;
+    color: black;
+    text-shadow: 1px 1px lightgray;
 }
 table{
     width: 100%;
@@ -31,19 +32,75 @@ table{
 
 th{
     border: 1px solid #000000;
+    text-align: left;
 }
 
 td{
     border: 1px solid #000000;
+    text-align: left;
 }
 </style>
-|Company|Position|From|To|
-|:------|:-------|:---|:---|
-|Microsoft Canada|Account Technology Strategist |2013 |2017 |
-|Microsoft UK|Account Technology Strategist |2002 |2012 |
-|Ernst &amp; Young LLP &nbsp;&nbsp;&nbsp;|Senior Manager |2001 |2002 |
-|IBM|eBusiness Consultant |1999 |2001 |
-|Oracle|Knowledge Manager &amp; Snr. Consultant |1993 |1999 |
-|ASC Ltd.|Consultant |1990 |1993 |
-|Davidsons Ltd.|Systems &amp; Network Controller &nbsp;&nbsp;|1987 |1990 |
-{:.borderedtable}
+
+<table>
+  <tr class="highlighter">
+    <th>Company</th>
+    <th>Position</th>
+    <th>From</th>
+    <th>To</th>
+  </tr>
+  <tr>
+    <td>Microsoft Canada</td>
+    <td>Account Technology Strategist</td>
+    <td>2013</td>
+    <td>2017</td>
+  </tr>
+  <tr>
+    <td>Microsoft UK</td>
+    <td>Account Technology Strategist</td>
+    <td>2009</td>
+    <td>2012</td>
+  </tr>
+  <tr>
+    <td>Microsoft UK</td>
+    <td>Program Manager</td>
+    <td>2008</td>
+    <td>2009</td>
+  </tr>
+  <tr>
+    <td>Microsoft UK</td>
+    <td>Enterprise Strategy Consultant</td>
+    <td>2002</td>
+    <td>2008</td>
+  </tr>
+  <tr>
+    <td>Ernst &amp; Young LLP</td>
+    <td>Senior Manager</td>
+    <td>2001</td>
+    <td>2002</td>
+  </tr>
+  <tr>
+    <td>IBM UK Ltd.</td>
+    <td>eBusiness Consultant</td>
+    <td>1999</td>
+    <td>2001</td>
+  </tr>
+  <tr>
+    <td>Oracle</td>
+    <td>Knowledge Mgr. &amp; Snr. Consultant</td>
+    <td>1993</td>
+    <td>1999</td>
+  </tr>
+  <tr>
+    <td>ASC Ltd.</td>
+    <td>Consultant</td>
+    <td>1990</td>
+    <td>1993</td>
+  </tr>
+  <tr>
+    <td>Davidsons Ltd.</td>
+    <td>Systems Controller</td>
+    <td>1987</td>
+    <td>1990</td>
+  </tr>
+</table>
+
