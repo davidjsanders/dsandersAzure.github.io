@@ -28,7 +28,7 @@ linkedin_profile: www.linkedin.com/in/dsanders-msc
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
