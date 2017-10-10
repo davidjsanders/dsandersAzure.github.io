@@ -13,9 +13,7 @@ Bridges gaps between business units and Information Technology by enabling clear
 Strategy &vert; Facilitation &vert; C-Suite Engagement &vert; Business Alignment &vert; Coordination &vert; Communications &vert; Presentations &vert; Roadmaps &vert; Evaluation &vert; Prototyping &vert; Proof of Concepts &vert; Organizational Change &vert; Matrix Management &vert; Program Management &vert; Project Management
 </p>
 
-<p>
-  I have worked with a number of companies over my career including:
-</p>
+I have worked with a number of companies over my career including:
 
 <style>
 .highlighter {
