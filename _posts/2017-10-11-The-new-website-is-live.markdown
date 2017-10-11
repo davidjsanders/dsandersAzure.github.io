@@ -8,7 +8,7 @@ categories:
 - Branding
 - Career
 ---
-**tl&dr : The new [website](www.davidjsanders.com) is live and built with GoDaddy's web builder** 
+**tl&dr : The new [website](http://www.davidjsanders.com) is live and built with GoDaddy's web builder** 
 
 I love **simplicity**. As I begin the next stage of my 
 career and look for a role that will take me to the
@@ -18,11 +18,11 @@ responsive design (it needs to look good across devices),
 simple interface, and easy to maintain.
 
 I short-listed three options:
-* My [LinkedIn Profile](www.linkedin.com/in/dsanders-msc)
+* My [LinkedIn Profile](https://www.linkedin.com/in/dsanders-msc)
 is publicly available and easy to use. My LinkedIn profile 
 already exists and is kept up to date, so really there 
 was nothing to do there.
-* [Workfolio](www.workfolio.com) is a dedicated branding
+* [Workfolio](https://www.workfolio.com) is a dedicated branding
 site to increase professional visibility. Workfolio was 
 interesting as I had an offer to use it for free for a 
 period of six months but it's $12.75/mo after.
