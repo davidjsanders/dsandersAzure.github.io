@@ -5,9 +5,9 @@ date: 2017-10-04 16:00:00 +0000
 categories:
 - Welcome
 ---
-Welcome to the new website. This is a first for me using two technologies I really like; Jekyll (1) and GitHub Pages (2). 
-Jekyll is a static site generator and works hand-in-hand with GitHub pages to produce static sites. I'm still trying to figure
-out my way around them both, but so far so good ;)
+Welcome to the new blog site (blogs.davidjsanders.com). This is a first for me using two technologies I really like for blogging and source control: Jekyll (1) and GitHub Pages (2). Jekyll is a static site generator and works hand-in-hand with GitHub pages to produce static sites. I'm still trying to figure out my way around them both, but so far so good ;)
+
+Update 10/10/17: The new website is also now live (www.davidjsanders.com)
 
 ### References
 1. Jekyll (n.d.) *Transform your plain text into static websites and blogs.*. Available at: [https://jekyllrb.com/](https://jekyllrb.com/)
