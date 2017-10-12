@@ -115,9 +115,9 @@ integration tests, when simply changing the config allows
 rapid testing in seconds across multiple storage locations.
 
 #### References
-1. Redis Labs (n.d.), *Homepage*. Available at: https://redislabs.com
+1. Redis Labs (n.d.), *Homepage*. Available at: [https://redislabs.com](https://redislabs.com)
 (Accessed: 12 October 2017)
-2. Wiggins, A. (2017) *The Twelve Factor App*. Available at: https://12factor.net/
+2. Wiggins, A. (2017) *The Twelve Factor App*. Available at: [https://12factor.net/](https://12factor.net/)
 (Accessed: 12 October 2017)
 
 David
