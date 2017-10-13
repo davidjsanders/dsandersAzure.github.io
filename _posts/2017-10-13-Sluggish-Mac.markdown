@@ -14,13 +14,13 @@ categories:
 
 File under: #JoyOfCloud #Friday13th
 
+![Hard disk image](/uploads/2017/10/13/patrick-lindenberg-191841.jpg)
+(Lindenberg, P.)
+
 Sign-in to my mac this morning to a sluggish and 
 lethargic response. Instinctively, I know it's memory 
 management and, sure enough, OneDrive is consuming 
 6.5GB or RAM. 
-
-![Hard disk image](/uploads/2017/10/13/patrick-lindenberg-191841.jpg)
-(Lindenberg, P.)
 
 I force quit it and Google Backup and Sync shoots 
 up to 75% of CPU :)
