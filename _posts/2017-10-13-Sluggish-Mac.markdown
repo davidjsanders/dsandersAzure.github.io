@@ -12,7 +12,8 @@ categories:
 - Google Backup and Sync
 ---
 
-#JoyOfCloud #Friday13th
+File under: #JoyOfCloud #Friday13th
+
 Sign-in to my mac this morning to a sluggish and 
 lethargic response. Instinctively, I know it's memory 
 management and, sure enough, OneDrive is consuming 
