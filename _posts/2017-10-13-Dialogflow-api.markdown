@@ -11,7 +11,7 @@ categories:
 
 ![Hard disk image](/uploads/2017/10/19/facebook-messenger-chat.png)
 
-If you haven't looked at Dialogflow (2) (was previously
+If you haven't looked at Dialogflow (1) (was previously
 API.ai) I can really recommend it. The screenshot above 
 shows an example of using my hobby app (my CowBull 
 microservice game) with Facebook messenger and natural 
