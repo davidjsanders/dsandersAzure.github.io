@@ -68,7 +68,7 @@ David
 
 david@davidjsanders.com 
 
-####References
+#### References
 1. Monroy, G (24 Oct 2017), *Introducing AKS (managed Kubernetes) and Azure Container Registry improvements*.
 Available at: [https://azure.microsoft.com/en-us/blog/introducing-azure-container-service-aks-managed-kubernetes-and-azure-container-registry-geo-replication/](https://azure.microsoft.com/en-us/blog/introducing-azure-container-service-aks-managed-kubernetes-and-azure-container-registry-geo-replication/)
 (Accessed: 6 November 2017)
