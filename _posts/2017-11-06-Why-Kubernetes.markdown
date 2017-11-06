@@ -13,11 +13,11 @@ categories:
 - Hobby App
 ---
 
-###tl;dr: The flexibility and portability of Kubernetes makes it *incredibly* simple to run containerized workloads on-premises or on any cloud; managed Kubernetes services like AKS and GKE abstract the complexity from devs and ops while enabling the right to switch service providers on a dime!
+### tl;dr: The flexibility and portability of Kubernetes makes it *incredibly* simple to run containerized workloads on-premises or on any cloud; managed Kubernetes services like AKS and GKE abstract the complexity from devs and ops while enabling the right to switch service providers on a dime!
 
 ![Hard disk image](/uploads/2017/11/06/k8s_blue.png)
 
-###Why Kubernetes (K8S) is winning container scheduling and orchestration
+### Why Kubernetes (K8S) is winning container scheduling and orchestration
 So, you may (or may not) know that Microsoft joined the K8S first world with a new managed Azure Kubernetes Services (AKS) which aims to abstract the management layer and make it “…easier to manage and operate your Kubernetes environments, all without sacrificing portability”([1](https://azure.microsoft.com/en-us/blog/introducing-azure-container-service-aks-managed-kubernetes-and-azure-container-registry-geo-replication/)). 
 Like the great techie I am, I’ve been investigating and researching the new service and my first take is it’s a great effort impacted by (some unforeseen?) high demand, leading to performance issues which realistically prevent me using it in anger. The solution isn't really ready
 for primetime yet (it is still tagged beta, although I think alpha may be more realistic.)
