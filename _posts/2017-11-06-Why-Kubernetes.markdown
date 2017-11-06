@@ -57,7 +57,9 @@ gcloud container clusters create clustername \
       --num-nodes 3
 gcloud container clusters get-credentials clustername --zone=us-east-4a
 ```
-Thats it. All of my ``kubectl`` commands work exactly the same against GKE as AKS. Okay, so I'm careful with cash and I don't really like to spin up cloud architecture when my 16GB RAM linux laptop is available, so what about locally running my K8S app?
+Thats it. All of my ``kubectl`` commands work exactly the same against GKE as AKS. Nothing changes in the app - the configuration map, pods, services, and external IPs are created in Kubernetes without any other vendor specific commands.
+
+Those who know me, know I'm careful with cash and I don't really like to spin up cloud architectures for continuous usage (a.k.a. charges) when my linux laptop is readily available at my side, so what about locally running my K8S app?
 ```
 minikube start --memory 4096 --cpus 2
 kubectl config use-context minikube
@@ -72,3 +74,4 @@ david@davidjsanders.com
 1. Monroy, G (24 Oct 2017), *Introducing AKS (managed Kubernetes) and Azure Container Registry improvements*.
 Available at: [https://azure.microsoft.com/en-us/blog/introducing-azure-container-service-aks-managed-kubernetes-and-azure-container-registry-geo-replication/](https://azure.microsoft.com/en-us/blog/introducing-azure-container-service-aks-managed-kubernetes-and-azure-container-registry-geo-replication/)
 (Accessed: 6 November 2017)
+2. Kubernetes (12 Oct 2016), *Kubernetes Logo*. Available at: [https://github.com/kubernetes/kubernetes/tree/master/logo](https://github.com/kubernetes/kubernetes/tree/master/logo) (Accessed: 6 November 2017)
