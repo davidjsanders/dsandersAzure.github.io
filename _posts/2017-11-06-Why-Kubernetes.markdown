@@ -13,7 +13,7 @@ categories:
 - Hobby App
 ---
 
-#### tl;dr: The flexibility and portability of Kubernetes makes it *incredibly* simple to run containerized workloads on-premises or on any cloud; managed Kubernetes services like AKS and GKE abstract the complexity from devs and ops while enabling the right to switch service providers on a dime! While other clustering solutions are available (e.g. Docker Swarm, DC/OS, etc.), K8S makes it *so simple* it requires much less cognitive load to learn and optimize.
+##### tl;dr: The flexibility and portability of Kubernetes makes it *incredibly* simple to run containerized workloads on-premises or on any cloud; managed Kubernetes services like AKS and GKE abstract the complexity from devs and ops while enabling the right to switch service providers on a dime! While other clustering solutions are available (e.g. Docker Swarm, DC/OS, etc.), K8S makes it *so simple* it requires much less cognitive load to learn and optimize.
 
 ![Hard disk image](/uploads/2017/11/06/k8s_blue.png)
 
